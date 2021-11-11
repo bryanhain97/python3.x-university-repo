@@ -1,6 +1,6 @@
 print("Programm um Klausurnote zu bestimmen gestartet.")
 print("Es wird anhand des eingegebenen Notenschlüssels (1-3) \n"
-      "und ihrer erreichten Punktzahl ihre Klausurnote bestimmt.")
+      "und ihrer erreichten Punktzahl (0-100) ihre Klausurnote bestimmt.")
 notenschlüssel = float(input("Notenschlüssel eingeben (1-3): "))
 
 if (notenschlüssel == 1):
