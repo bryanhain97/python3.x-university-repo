@@ -144,13 +144,15 @@ if(notenschlüssel == 1 or notenschlüssel == 2 or notenschlüssel == 3):
     while bewerten:
         matrikelnummer = int(input("Matrikelnummer: "))
         punkte = float(input("erreichte Punktzahl: "))
-        note, bestanden = benotung(notenschlüssel, punkte)
-        klausuren.append([matrikelnummer, punkte, note, bestanden])
+        klausuren.append([matrikelnummer, punkte])
         neuer_eintrag = input("Möchten Sie einen neuen Eintrag erstellen? ")
         if(neuer_eintrag != "ja"):
             break
     print("Matrikelnummer\t\tPunkte\tNote\tBestanden")
     for klausur in klausuren:
-        print(f"{klausur[0]}\t\t\t{klausur[1]}\t{klausur[2]}\t\t{klausur[3]}")
+        matrikelnummer = klausur[0]
+        punkte = klausur[1]
+        note, bestanden = benotung(notenschlüssel, punkte)
+        print(f"{matrikelnummer}\t\t\t{punkte}\t{note}\t{bestanden}")
 else: 
     print("Ungültiger Notenschlüssel. Programm beendet.")
